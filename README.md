@@ -1,4 +1,3 @@
-#Paymal: cloned an UI from dribble 
 
 
 <p align="center">
