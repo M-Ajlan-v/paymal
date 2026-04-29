@@ -2,28 +2,26 @@ import 'package:flutter/material.dart';
 
 class NavItem extends StatelessWidget {
   final IconData icon;
-  final String label;
+  final String name;
 
-  const NavItem({
+  NavItem({
     super.key,
     required this.icon,
-    required this.label,
-  });
+    required this.name
+    });
 
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center, 
+      mainAxisSize: MainAxisSize.min,
       children: [
-        Icon(icon, color: Colors.white, size: 25),
-        Text(
-          label,
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 10,
-            height: 1,
-          ),
+        Icon(icon, size: 30, color: Colors.white,),
+        SizedBox(height: 4,),
+        Text(name, style: TextStyle(
+          fontSize: 10,
+          color: Colors.white
         ),
+        )
       ],
     );
   }
